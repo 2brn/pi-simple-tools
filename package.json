@@ -1,0 +1,47 @@
+{
+  "name": "@2brn/pi-simple-tools",
+  "version": "0.1.0",
+  "description": "A minimal custom footer and isolated subagent tool for Pi.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2brn/pi-simple-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/2brn/pi-simple-tools/issues"
+  },
+  "homepage": "https://github.com/2brn/pi-simple-tools#readme",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "footer",
+    "subagent"
+  ],
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/simple-footer.js",
+      "./extensions/simple-subagent.js"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "npm test && npm pack --dry-run"
+  }
+}
